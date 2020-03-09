@@ -9,9 +9,9 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
 	binary_tree_t *TempNode = malloc(sizeof(binary_tree_t));
 	TempNode->n = value;
-	TempNode->*parent = parent;
-	TempNode->*left = NULL;
-	TempNode->*right = NULL;
+	TempNode->parent = parent;
+	TempNode->left = NULL;
+	TempNode->right = NULL;
 
-	return (*TempNode);
+	return (TempNode);
 }
