@@ -9,7 +9,6 @@
  */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
-	binary_tree_t *saved = NULL;
 	binary_tree_t *current = malloc(sizeof(binary_tree_t));
 
 	if (parent == NULL || current == NULL)
@@ -22,9 +21,8 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 
 	if (parent->left != NULL)
 	{
-		saved = parent->left;
-		saved->parent = current;
-		current->left = saved;
+		current->left = parent->left;
+		current->left->parent = current;
 	}
 
 	parent->left = current;
