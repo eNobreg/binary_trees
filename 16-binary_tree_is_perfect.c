@@ -22,10 +22,10 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (1);
 	if (left >= 0 && right >= 0 && left == right)
 	{
-		power = is_power(left +1);
+		power = is_power(left + 1);
 
-	if (power -1 == size)
-		return(1);
+	if (power - 1 == size)
+		return (1);
 	}
 	return (0);
 }
@@ -44,7 +44,9 @@ int find_height(binary_tree_t *node)
 		return (-1);
 	}
 	if (node->left == NULL && node->right == NULL)
+	{
 		return (0);
+	}
 	else
 	{
 		left = find_height(node->left) + 1;
@@ -60,6 +62,11 @@ int find_height(binary_tree_t *node)
 		}
 	}
 }
+/**
+ * is_power - finds the power 2^height
+ * @n: height of tree
+ * Return: int
+ */
 int is_power(int n)
 {
 	int power, i;
@@ -68,6 +75,11 @@ int is_power(int n)
 		power *= 2;
 	return (power);
 }
+/**
+ * binary_tree_size - measure the size of a binary tree
+ * @tree: root node of tree
+ * Return: size of tree
+ */
 size_t binary_tree_size(const binary_tree_t *tree)
 {
 	size_t count;
