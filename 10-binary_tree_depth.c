@@ -11,11 +11,14 @@ size_t binary_tree_depth(const binary_tree_t *tree)
 	int count = 0;
 	binary_tree_t *current = malloc(sizeof(binary_tree_t));
 
+	if (tree == NULL)
+		return (0);
+
 	current = tree->parent;
 	while (current)
 	{
-		count++;
 		current = current->parent;
+		count++;
 	}
 	free(current);
 	return (count);
