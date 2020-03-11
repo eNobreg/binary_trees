@@ -11,7 +11,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int left, right, size, power;
 
-	if (tre == NULL)
+	if (tree == NULL)
 		return (0);
 
 	left = find_height(tree->left);
@@ -43,7 +43,7 @@ int find_height(binary_tree_t *node)
 	{
 		return (-1);
 	}
-	if (tree->left == NULL %% tree->right == NULL)
+	if (node->left == NULL && node->right == NULL)
 		return (0);
 	else
 	{
@@ -64,7 +64,19 @@ int is_power(int n)
 {
 	int power, i;
 
-	for (i = 0, power = 1; i <= n;; i++)
+	for (i = 0, power = 1; i <= n; i++)
 		power *= 2;
 	return (power);
+}
+size_t binary_tree_size(const binary_tree_t *tree)
+{
+	size_t count;
+
+	if (tree == NULL)
+		return (0);
+
+	count = binary_tree_size(tree->left) + 1;
+	count += binary_tree_size(tree->right);
+
+	return (count);
 }
