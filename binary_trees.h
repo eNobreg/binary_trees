@@ -50,5 +50,7 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
 int binary_tree_is_bst(const binary_tree_t *tree);
+int binary_tree_is_complete(const binary_tree_t *tree);
+int check_node_index(size_t size, size_t index, const binary_tree_t *tree);
 
 #endif /* _BINARY_TREES_H_ */
