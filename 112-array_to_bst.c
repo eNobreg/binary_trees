@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "binary_trees.h"
-
+/**
+ * array_to_bst - array to bst
+ *@array: array
+ *@size: size of array
+ *Return: pointer
+*/
 bst_t *array_to_bst(int *array, size_t size)
 {
 	bst_t *root = NULL;
@@ -11,7 +16,6 @@ bst_t *array_to_bst(int *array, size_t size)
 		return (NULL);
 
 	root = bst_insert(&root, array[0]);
-
 	while (i < size)
 	{
 		bst_insert(&root, array[i]);
