@@ -54,5 +54,6 @@ int binary_tree_is_complete(const binary_tree_t *tree);
 int check_node_index(size_t size, size_t index, const binary_tree_t *tree);
 bst_t *bst_insert(bst_t **tree, int value);
 bst_t *array_to_bst(int *array, size_t size);
+bst_t *bst_search(const bst_t *tree, int value);
 
 #endif /* _BINARY_TREES_H_ */
