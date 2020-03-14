@@ -42,7 +42,7 @@ int binary_tree_is_full(const binary_tree_t *tree);
 int binary_tree_is_perfect(const binary_tree_t *tree);
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
-int is_power(int n);	
+int is_power(int n);
 
 /* Advanced Tasks */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
@@ -52,5 +52,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 int binary_tree_is_bst(const binary_tree_t *tree);
 int binary_tree_is_complete(const binary_tree_t *tree);
 int check_node_index(size_t size, size_t index, const binary_tree_t *tree);
+bst_t *bst_insert(bst_t **tree, int value);
+bst_t *array_to_bst(int *array, size_t size);
 
 #endif /* _BINARY_TREES_H_ */
